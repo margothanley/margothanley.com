@@ -1,0 +1,44 @@
+/* Base */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #fafafa;
+  color: #111;
+}
+
+/* Layout */
+
+nav {
+  padding: 24px 32px;
+  font-size: 15px;
+}
+
+nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #555;
+}
+
+nav a.active {
+  color: #000;
+}
+
+main {
+  max-width: 640px;
+  padding: 80px 32px;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 36px;
+  font-weight: normal;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
