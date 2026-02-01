@@ -1,44 +1,104 @@
-/* Base */
+/* ---------- Base reset ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background: #fafafa;
-  color: #111;
+/* ---------- Tokens ---------- */
+:root{
+  --bg: #fbfbfb;
+  --text: #111;
+  --muted: #666;
+  --rule: #e6e6e6;
+
+  --maxw: 720px;
+  --pad: 72px;
+
+  --fs-body: 17px;
+  --lh-body: 1.65;
+
+  --fs-h1: 34px;
+  --lh-h1: 1.15;
+
+  --fs-nav: 14px;
+  --ls-nav: 0.02em;
 }
 
-/* Layout */
-
-nav {
-  padding: 24px 32px;
-  font-size: 15px;
+/* ---------- Page ---------- */
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: var(--lh-body);
+  font-size: var(--fs-body);
+  padding: var(--pad);
+  max-width: var(--maxw);
 }
 
-nav a {
-  margin-right: 20px;
+/* Comfortable on smaller screens */
+@media (max-width: 720px){
+  :root{ --pad: 28px; --fs-h1: 30px; }
+}
+
+/* ---------- Nav (quiet, academic) ---------- */
+nav{
+  margin-bottom: 40px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+nav a{
+  display: inline-block;
+  margin-right: 16px;
   text-decoration: none;
-  color: #555;
+  color: var(--muted);
+  font-size: var(--fs-nav);
+  letter-spacing: var(--ls-nav);
 }
 
-nav a.active {
+nav a:hover{
+  color: var(--text);
+}
+
+/* If your HTML uses class="active" on the current page link */
+nav a.active{
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* ---------- Type hierarchy ---------- */
+h1{
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+h2{
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 600;
+  margin-top: 34px;
+  margin-bottom: 10px;
+}
+
+p{
+  margin-bottom: 14px;
+}
+
+/* Links in body */
+main a{
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+main a:hover{
   color: #000;
 }
 
-main {
-  max-width: 640px;
-  padding: 80px 32px;
+/* Optional: make lists feel editorial (if you add them later) */
+ul{
+  margin: 12px 0 16px 20px;
 }
-
-/* Typography */
-
-h1 {
-  font-size: 36px;
-  font-weight: normal;
-  margin-bottom: 24px;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.6;
+li{
+  margin: 6px 0;
 }
