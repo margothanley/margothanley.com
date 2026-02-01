@@ -1,4 +1,6 @@
-/* ---- Base ---- */
+/* =========================
+   Base
+   ========================= */
 
 html {
   font-size: 16px;
@@ -6,53 +8,102 @@ html {
 
 body {
   margin: 0;
-  padding: 48px 64px;
+  padding: 56px 72px; /* “stationery” air */
   font-family: Helvetica, Arial, sans-serif;
-  color: #3c0008;
+  color: #3c0008; /* Bulgarian rose */
   background: #ffffff;
   line-height: 1.5;
 }
 
-/* ---- Layout ---- */
+/* =========================
+   Layout
+   ========================= */
 
 main {
-  max-width: 720px;
+  max-width: 640px; /* editorial width */
+  margin-top: 64px;
 }
 
-/* ---- Navigation ---- */
+/* =========================
+   Navigation
+   ========================= */
 
 nav {
-  margin-bottom: 64px;
+  margin-bottom: 72px;
 }
 
 nav a {
   text-decoration: none;
   color: #3c0008;
   margin-right: 24px;
-  font-size: 14px;
-  letter-spacing: 0.02em;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+nav a:hover {
+  opacity: 1;
 }
 
 nav a.active {
   border-bottom: 1px solid #3c0008;
   padding-bottom: 2px;
+  opacity: 1;
 }
 
-/* ---- Typography ---- */
+/* =========================
+   Typography
+   ========================= */
 
 h1 {
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   margin: 0 0 24px 0;
+}
+
+.degree {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.75;
+  margin-left: 6px;
 }
 
 p {
   font-size: 16px;
   margin: 0 0 16px 0;
-  max-width: 640px;
+  max-width: 56ch;
 }
 
-/* ---- Subtle hierarchy helpers (future use) ---- */
+.lede {
+  font-size: 16px;
+  margin: 0 0 22px 0;
+  max-width: 56ch;
+}
+
+/* =========================
+   Lists / Meta
+   ========================= */
+
+.meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.meta li {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 0 0 8px 0;
+}
+
+.meta li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   Helpers
+   ========================= */
 
 .section {
   margin-top: 64px;
