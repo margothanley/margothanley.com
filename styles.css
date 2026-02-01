@@ -1,104 +1,64 @@
-/* ---------- Base reset ---------- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ---- Base ---- */
 
-/* ---------- Tokens ---------- */
-:root{
-  --bg: #fbfbfb;
-  --text: #111;
-  --muted: #666;
-  --rule: #e6e6e6;
-
-  --maxw: 720px;
-  --pad: 72px;
-
-  --fs-body: 17px;
-  --lh-body: 1.65;
-
-  --fs-h1: 34px;
-  --lh-h1: 1.15;
-
-  --fs-nav: 14px;
-  --ls-nav: 0.02em;
+html {
+  font-size: 16px;
 }
 
-/* ---------- Page ---------- */
-body{
+body {
+  margin: 0;
+  padding: 48px 64px;
   font-family: Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: var(--lh-body);
-  font-size: var(--fs-body);
-  padding: var(--pad);
-  max-width: var(--maxw);
+  color: #3c0008;
+  background: #ffffff;
+  line-height: 1.5;
 }
 
-/* Comfortable on smaller screens */
-@media (max-width: 720px){
-  :root{ --pad: 28px; --fs-h1: 30px; }
+/* ---- Layout ---- */
+
+main {
+  max-width: 720px;
 }
 
-/* ---------- Nav (quiet, academic) ---------- */
-nav{
-  margin-bottom: 40px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--rule);
+/* ---- Navigation ---- */
+
+nav {
+  margin-bottom: 64px;
 }
 
-nav a{
-  display: inline-block;
-  margin-right: 16px;
+nav a {
   text-decoration: none;
-  color: var(--muted);
-  font-size: var(--fs-nav);
-  letter-spacing: var(--ls-nav);
+  color: #3c0008;
+  margin-right: 24px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
 }
 
-nav a:hover{
-  color: var(--text);
+nav a.active {
+  border-bottom: 1px solid #3c0008;
+  padding-bottom: 2px;
 }
 
-/* If your HTML uses class="active" on the current page link */
-nav a.active{
-  color: var(--text);
-  text-decoration: none;
+/* ---- Typography ---- */
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 24px 0;
 }
 
-/* ---------- Type hierarchy ---------- */
-h1{
-  font-size: var(--fs-h1);
-  line-height: var(--lh-h1);
-  font-weight: 500;
-  margin-bottom: 18px;
+p {
+  font-size: 16px;
+  margin: 0 0 16px 0;
+  max-width: 640px;
 }
 
-h2{
-  font-size: 18px;
-  line-height: 1.35;
-  font-weight: 600;
-  margin-top: 34px;
-  margin-bottom: 10px;
+/* ---- Subtle hierarchy helpers (future use) ---- */
+
+.section {
+  margin-top: 64px;
 }
 
-p{
-  margin-bottom: 14px;
-}
-
-/* Links in body */
-main a{
-  color: var(--text);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-main a:hover{
-  color: #000;
-}
-
-/* Optional: make lists feel editorial (if you add them later) */
-ul{
-  margin: 12px 0 16px 20px;
-}
-li{
-  margin: 6px 0;
+.small {
+  font-size: 14px;
+  opacity: 0.85;
 }
